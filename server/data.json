@@ -1,0 +1,16 @@
+{
+  "students": [
+    {
+      "id": "d78c",
+      "fname": "Abdelmalek",
+      "lname": "Megoura",
+      "favg": 13
+    },
+    {
+      "id": "bd12",
+      "fname": "Malek",
+      "lname": "Doe",
+      "favg": 7
+    }
+  ]
+}

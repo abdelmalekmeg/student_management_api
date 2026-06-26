@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Management API</title>
+  <link rel="stylesheet" href="src/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <h1>Student Management API <i class="fa-brands fa-node-js" style="color: var(--green-font);"></i></h1>
+  <div class="main">
+    <div class="panel operations">
+      <h2><i class="fa-solid fa-users-gear"></i> Operations</h2>
+      <hr>
+      <div class="opt green-btn add-active" id="add"><i class="fa-solid fa-user-plus"></i> | Add Student</div>
+      <div class="opt red-btn" id="remove"><i class="fa-solid fa-user-minus"></i> | Remove Student</div>
+      <div class="opt blue-btn" id="update"><i class="fa-solid fa-user-pen"></i> | Update Student</div>
+      <div class="opt yellow-btn" id="list"><i class="fa-solid fa-user-group"></i> | List Students</div>
+    </div>
+
+    <div class="panel control">
+    </div>
+
+  </div>
+  <script type="module" src="src/main.ts"></script>
+</body>
+</html>

@@ -1,0 +1,279 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik:ital,wght@0,500;1,500&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+:root {
+    --bg: #F4F6F8;
+    --main: #FFFFFF;
+    --brd: #b3b3b3;
+    --local-radius: 24px;
+
+    --green-bg: #DFF5E1;
+    --green-brd: #9FD6AE;
+    --green-font: #2E7D32;
+
+    --red-bg: #FDE2E1;
+    --red-brd: #F2A9A6;
+    --red-font: #B23A3A;
+
+    --yellow-bg: #FFF6D6;
+    --yellow-brd: #F2D98A;
+    --yellow-font: #8A6A00;
+
+    --blue-bg: #E3F0FF;
+    --blue-brd: #AFCFF5;
+    --blue-font: #2F6FB2;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1 {
+    margin-bottom: 0.6em;
+}
+
+.main {
+    min-height: 70vh;
+    min-width: 50vw;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    flex-direction: row;
+}
+
+.panel {
+    background-color: var(--main);
+    border: 1px solid var(--brd);
+    min-height: 100%;
+    min-width: 5vw;
+}
+
+.operations {
+    border-radius: var(--local-radius) 0 0 var(--local-radius);
+    padding: 18px;
+    display: block;
+    text-align: center;
+    width: 20vw;
+}
+
+.operations hr {
+    margin-block: 0.6em;
+}
+
+.opt {
+    width: 100%;
+    min-height: 5vh;
+    border: 1px solid var(--brd);
+    border-radius: 12px;
+    margin-block: 0.4em;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 2px 12px;
+    text-align: left;
+    transition: all 0.1s ease-in;
+    align-content: center;
+}
+
+.opt:hover {
+    transform: translateX(5px);
+    cursor: pointer;
+}
+
+.green-btn {
+    background-color: var(--green-bg);
+    border-color: var(--green-brd);
+    color: var(--green-font);
+}
+
+.add-active {
+    background-color: var(--green-brd);
+    transform: translateX(5px);
+}
+
+.red-btn {
+    background-color: var(--red-bg);
+    border-color: var(--red-brd);
+    color: var(--red-font);
+}
+
+.remove-active {
+    background-color: var(--red-brd);
+    transform: translateX(5px);
+}
+
+.blue-btn {
+    background-color: var(--blue-bg);
+    border-color: var(--blue-brd);
+    color: var(--blue-font);
+}
+
+.update-active {
+    background-color: var(--blue-brd);
+    transform: translateX(5px);
+}
+
+.yellow-btn {
+    background-color: var(--yellow-bg);
+    border-color: var(--yellow-brd);
+    color: var(--yellow-font);
+}
+
+.list-active {
+    background-color: var(--yellow-brd);
+    transform: translateX(5px);
+}
+
+.green-active:hover, .red-active:hover, .blue-active:hover, .yellow-active:hover {
+    transform: inherit;
+    transform: translateX(5px);
+    cursor: default;
+}
+
+.control {
+    width: 100%;
+    border-left: none;
+    border-radius: 0 var(--local-radius) var(--local-radius) 0;
+    padding: 18px;
+}
+
+hr {
+    margin-block: 0.6em;
+    height: 1px;
+    border: none;
+    background-color: var(--brd);
+}
+
+.input {
+    display: flex;
+    height: 7vh;
+    width: 100%;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-block: 0.8em;
+}
+
+input {
+    width: 60%;
+    height: 100%;
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 1.2rem;
+    outline: none;
+    border: 2px solid var(--brd);
+}
+
+.addstudent {
+    padding: 12px;
+    background-color: var(--green-font);
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: all 0.1s ease-in;
+}
+
+.addstudent:hover {
+    cursor: pointer;
+    filter: brightness(1.1);
+    transform: scale(1.03);
+}
+
+.addstudent:active {
+    filter: brightness(1.2);
+    transform: scale(1);
+}
+
+.popup {
+    animation: popup 0.2s ease-in;
+}
+
+@keyframes popup {
+    from {
+        opacity: 0%;
+        transform: translateX(-8px);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+.list-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+    height: 60vh;
+    width: 100%;
+    font-size: 1.4rem;
+    font-weight: bold;
+    scroll-behavior: smooth;
+    overflow-y: auto;
+}
+
+.list-container h1 {
+    margin: 1em;
+    font-size: 1rem;
+    color: var(--brd);
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 2px solid var(--brd);
+    border-radius: 12px;
+    min-height: 6vh;
+    width: 100%;
+    
+}
+
+.cardinfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cardid {
+    color: var(--brd);
+    margin-inline: 0.4em 0.8em;
+}
+
+.cardavg {
+    min-height: 3vh;
+    background-color: var(--brd);
+    min-width: 4vw;
+    border-radius: 12px;
+    margin-inline-end: 0.4em;
+}
+
+.gavg {
+    background-color: var(--green-bg);
+    color: var(--green-font);
+}
+
+.ravg {
+    background-color: var(--red-bg);
+    color: var(--red-font);
+}
+
+.navg {
+    background-color: var(--bg);
+    color: var(--brd);
+}
