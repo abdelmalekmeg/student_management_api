@@ -13,4 +13,7 @@ Made in orderer to learn express, the project features small student management 
 
   `node index.js`
 
-+ Open 
++ Start the web page:
+
+  `cd ../client`
+  `npm run dev`
